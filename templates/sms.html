@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>| Spam SMS detector |</title>
+  <style>
+      @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px;
+			}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+				}
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+			}				
+textarea{
+    border: solid;
+    color : black;
+}
+
+</style>
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+ </head>
+<body style="background-color:#6699ff;">
+ <div >
+<br><br><br>
+<h1 align="center"> Spam SMS detector</h1>
+<h2 align="center" > Enter SMS below </h2> <br>
+    	<div class="ml-container" align="center" style="background-color:#6699ff>
+    		<form action="{{ url_for('predict') }}" id="f1" method="POST"><br>
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="    	Enter or Paste Your Message Here...  "></textarea></br>       		
+			<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+    </div>
+{{my_prediction}}
+<h3 align="center"> Author : Sai Ram.K <br> Last Updated : 11 December 2020</h3>
+<p align="center"> Check out my socials below</p>
+
+
+
+
+<footer>
+  <a href="https://www.linkedin.com/in/am-ram/" target="_blank">
+  <div class="wrapper">
+      <div class="button">
+        <div class="icon"><i class="fab fa-linkedin"></i></div>
+        <span>LinkedIn</span>
+      </div></a>
+  <a href="https://github.com/am-ram" target="_blank">
+      <div class="button">
+        <div class="icon"><i class="fab fa-github" ></i></div>
+        <span>Github</span>
+      </div>
+</a>
+</footer>
+</body>
+</html>

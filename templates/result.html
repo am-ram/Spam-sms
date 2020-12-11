@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Spam SMS Detector</title>
+		<link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+	</head>
+<style>
+ html,body{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  float: left;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px; }
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+				}
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;}
+.results{ border-width:8px;
+border-style:solid;
+border-color:black;
+    width: 860px;
+    float: right;
+    border-top: 8px solid black;
+    border-left: 8px solid black;
+    border-right: 8px solid black;
+    border-bottom: 8px solid black;
+    padding-left: 20px;
+    margin-left: 20px; // Add here
+}
+
+
+</style>
+	<body style="background-color:#6699ff;">
+
+		<!-- Website Title -->
+		<div class="container">
+    		<h1 class='container-heading'>Spam SMS Detector</h1><br>
+                <h2 align="center">Your Result:</h2>
+    		
+    		</div>
+
+		<!-- Result -->
+		<div class="results">
+			{% if prediction==1 %}
+				<h1>Prediction: <span class='danger'>Gotcha! This is a SPAM message.</span></h1>
+				
+			{% elif prediction==0 %}
+				<h1>Prediction: <span class='safe'>Great! This is NOT a spam message.</span></h1>
+				
+			{% endif %}
+		</div>
+<h2 align="center"> Author : Sai Ram.K <br> Last Update : 11 December 2020 </h2> 
+		<!-- Footer -->
+<footer>
+  <a href="https://www.linkedin.com/in/am-ram/" target="_blank">
+  <div class="wrapper">
+      <div class="button">
+        <div class="icon"><i class="fab fa-linkedin"></i></div>
+        <span>LinkedIn</span>
+      </div></a>
+  <a href="https://github.com/am-ram" target="_blank">
+      <div class="button">
+        <div class="icon"><i class="fab fa-github" ></i></div>
+        <span>Github</span>
+      </div>
+</a>
+</footer>       
+
+	</body>
+</html>
