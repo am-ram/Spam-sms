@@ -7,7 +7,7 @@ Libraries used here :-<br>
                 4. sklearn's multinomial NB<br><br><br><br>
 Training set has 3900 samples.<br>
 Testing set has 1672 samples.<br>
-Accuracy = 98.2%<br><br><
+Accuracy = 98.2%<br><br>
 ![image](https://user-images.githubusercontent.com/75354390/114501268-49d15a00-9c47-11eb-839f-d2621a25e992.png)
 
 
